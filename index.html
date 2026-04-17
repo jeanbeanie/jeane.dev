@@ -1,0 +1,240 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jeane Ramos — Portfolio</title>
+
+    <!-- Tailwind CDN (TODO: switch from CDN) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script>
+    // Minimal palette + subtle "garden" accent
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        ink: "#0b0f14",          // dark bg
+                        paper: "#f7f7f5",        // light bg
+                        slate: "#111827",        // light text
+                        mist: "#94a3b8",         // muted text
+                        accent: "#2f6f4e",       // subtle garden green
+                        accent2: "#5fbf7b",
+                    },
+                },
+            },
+        };</script>
+</head>
+
+<body class="bg-paper text-slate dark:bg-ink dark:text-white">
+    <!-- Top navbar -->
+    <header>
+        <div>
+            <a href="#top">
+                <div>Jeane</div>
+                <div>Ramos</div>
+            </a>
+
+            <nav>
+                <a href="#skills">Skills</a>
+                <a href="#projects">Projects</a>
+                <a href="#blog">Blog</a>
+
+                <a href="#"
+                   title="Link your PDF resume">
+                    Download Resume
+                </a>
+
+                <button type="button"
+                        aria-label="Toggle dark mode">
+                    Dark
+                </button>
+            </nav>
+
+            <!-- Mobile -->
+            <div>
+                <button type="button"
+                        aria-label="Toggle dark mode">
+                    Dark
+                </button>
+                <a href="#skills">
+                    Menu
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main id="top">
+        <!-- Hero Section -->
+        <section>
+            <div>
+                <p>Hello world, I’m</p>
+
+                <h1>
+                    Jeane Ramos
+                </h1>
+
+                <p>
+                    I’m in love with
+                    <span>developing</span>.
+                </p>
+            </div>
+        </section>
+
+        <hr />
+
+        <!-- Skills -->
+        <section id="skills">
+            <div>
+                <div>
+                    <h2>Skills</h2>
+                    <p>
+                        A few seeds planted in the garden of my mind
+                    </p>
+                </div>
+            </div>
+
+            <div>
+                <div>
+                    <h3>Frontend</h3>
+                    <div>
+                        <span>React</span><span>HTML</span><span>CSS</span>
+                        <span>Tailwind</span><span>Accessibility</span>
+                    </div>
+                </div>
+
+                <div>
+                    <h3>Backend</h3>
+                    <div>
+                        <span>Node</span><span>Express</span><span>REST</span>
+                        <span>Postgres</span><span>Testing</span>
+                    </div>
+                </div>
+
+                <div>
+                    <h3>Design / Planning</h3>
+                    <div>
+                        <span>Wireframing</span><span>Figma</span>
+                        <span>UX</span><span>Docs</span>
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <span>&lt;&lt;</span>
+                Feel free to send all the good tech recommendations my way.
+            </div>
+        </section>
+
+        <hr />
+
+        <!-- Projects -->
+        <section id="projects">
+            <h2>Projects</h2>
+            <p>
+                Recent fruits harvested from the garden of my mind
+            </p>
+
+            <div>
+                <article>
+                    <h3>Tiny Games</h3>
+                    <p>
+                        Collection of small vanilla JS games.
+                    </p>
+                    <a href="#">
+                        View →
+                    </a>
+                </article>
+
+                <article>
+                    <h3>PomoRPG</h3>
+                    <p>
+                        Productivity tool and tracker.
+                    </p>
+                    <a href="#">
+                        View →
+                    </a>
+                </article>
+
+                <article>
+                    <h3>Custom Biome Lumber Camps</h3>
+                    <p>
+                        Rimworld mod project.
+                    </p>
+                    <a href="#">
+                        View →
+                    </a>
+                </article>
+            </div>
+
+            <div>
+                <a href="#">
+                    &lt;&lt; View GitHub Profile
+                </a>
+            </div>
+        </section>
+
+        <hr />
+
+        <!-- Blog -->
+        <section id="blog">
+            <h2>Blog</h2>
+            <p>
+                Compost fermenting in the garden of my mind
+            </p>
+
+            <div>
+                <article>
+                    <h3>Building Endurance To Resist Burnout</h3>
+                    <p>
+                        Notes on pacing, habits, and recovery.
+                    </p>
+                    <a href="#">
+                        Read →
+                    </a>
+                </article>
+
+                <article>
+                    <h3>Pros and Cons of AI in Code Development</h3>
+                    <p>
+                        Where it helps, where it hurts, how to use it well.
+                    </p>
+                    <a href="#">
+                        Read →
+                    </a>
+                </article>
+            </div>
+
+            <div>
+                <span>&lt;&lt;</span> More posts (coming soon)
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div>
+            <div>© 2026 Jeane Ramos</div>
+            <div>
+                <a href="#">LinkedIn</a>
+                <a href="#">GitHub</a>
+                <a href="#">Twitter</a>
+            </div>
+        </div>
+    </footer>
+
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+
+    <script>
+        // TODO: Rotating word list
+        const words = ["developing", "coding", "fixing bugs", "solving problems"];
+
+        // TODO change dark theme toggle to sun/moon icons
+    </script>
+</body>
+</html>
