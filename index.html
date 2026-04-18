@@ -46,7 +46,8 @@
                     Download Resume
                 </a>
 
-                <button type="button"
+                <button id="theme-toggle"
+                        type="button"
                         aria-label="Toggle dark mode">
                     Dark
                 </button>
@@ -54,7 +55,8 @@
 
             <!-- Mobile -->
             <div class="flex items-center gap-2 md:hidden">
-                <button type="button"
+                <button id="theme-toggle-mobile"
+                        type="button"
                         aria-label="Toggle dark mode">
                     Dark
                 </button>
@@ -233,6 +235,23 @@
     <script>
         // TODO: Rotating word list
         const words = ["developing", "coding", "fixing bugs", "solving problems"];
+        const root = document.documentElement;
+
+        document.getElementById("theme-toggle")?.addEventListener("click", toggleTheme);
+        document.getElementById("theme-toggle-mobile")?.addEventListener("click", toggleTheme);
+        root.classList.add("light");
+        // todo: persist theme preference in localStorage
+        function toggleTheme() {
+            const isLight = root.classList.toggle("light");
+            if (isLight) {
+                root.classList.remove("dark");
+                root.classList.add("light");
+            } else {
+                root.classList.remove("light");
+                root.classList.add("dark");
+            }
+            console.log("isLight", isLight)
+        }
 
         // TODO change dark theme toggle to sun/moon icons
     </script>
