@@ -29,14 +29,14 @@
 
 <body class="bg-paper text-slate dark:bg-ink dark:text-white">
     <!-- Top navbar -->
-    <header>
-        <div>
+    <header class="sticky top-0 border-b border-black/10">
+        <div class="flex max-w-5xl mx-auto items-center justify-between px-4 py-4">
             <a href="#top">
                 <div>Jeane</div>
                 <div>Ramos</div>
             </a>
 
-            <nav>
+            <nav class="items-center">
                 <a href="#skills">Skills</a>
                 <a href="#projects">Projects</a>
                 <a href="#blog">Blog</a>
@@ -53,7 +53,7 @@
             </nav>
 
             <!-- Mobile -->
-            <div>
+            <div class="flex items-center gap-2 md:hidden">
                 <button type="button"
                         aria-label="Toggle dark mode">
                     Dark
@@ -65,7 +65,7 @@
         </div>
     </header>
 
-    <main id="top">
+    <main id="top" class="mx-auto max-w-5xl px-4 ">
         <!-- Hero Section -->
         <section>
             <div>
