@@ -42,7 +42,7 @@
                 <a href="#blog">Blog</a>
 
                 <a href="#"
-                   title="Link your PDF resume">
+                   title="PDF Resume">
                     Download Resume
                 </a>
 
@@ -79,7 +79,7 @@
 
                 <p>
                     I’m in love with
-                    <span>developing</span>.
+                    <span id="rotating-word">developing</span>.
                 </p>
             </div>
         </section>
@@ -99,7 +99,7 @@
 
             <div class="mt-10 grid gap-6 md:grid-cols-3">
                 <div>
-                    <h3>Frontend</h3>
+                    <h3 class="font-semibold">Frontend</h3>
                     <div>
                         <span>React</span><span>HTML</span><span>CSS</span>
                         <span>Tailwind</span><span>Accessibility</span>
@@ -107,7 +107,7 @@
                 </div>
 
                 <div>
-                    <h3>Backend</h3>
+                    <h3 class="font-semibold">Backend</h3>
                     <div>
                         <span>Node</span><span>Express</span><span>REST</span>
                         <span>Postgres</span><span>Testing</span>
@@ -115,7 +115,7 @@
                 </div>
 
                 <div>
-                    <h3>Design / Planning</h3>
+                    <h3 class="font-semibold">Design / Planning</h3>
                     <div>
                         <span>Wireframing</span><span>Figma</span>
                         <span>UX</span><span>Docs</span>
@@ -140,7 +140,7 @@
 
             <div class="mt-10 grid gap-6 md:grid-cols-3">
                 <article>
-                    <h3>Tiny Games</h3>
+                    <h3 class="font-semibold">Tiny Games</h3>
                     <p>
                         Collection of small vanilla JS games.
                     </p>
@@ -150,7 +150,7 @@
                 </article>
 
                 <article>
-                    <h3>PomoRPG</h3>
+                    <h3 class="font-semibold">PomoRPG</h3>
                     <p>
                         Productivity tool and tracker.
                     </p>
@@ -160,7 +160,7 @@
                 </article>
 
                 <article>
-                    <h3>Custom Biome Lumber Camps</h3>
+                    <h3 class="font-semibold">Custom Biome Lumber Camps</h3>
                     <p>
                         Rimworld mod project.
                     </p>
@@ -188,7 +188,7 @@
 
             <div class="mt-10 grid gap-6 md:grid-cols-2">
                 <article>
-                    <h3>Building Endurance To Resist Burnout</h3>
+                    <h3 class="font-semibold">Building Endurance To Resist Burnout</h3>
                     <p>
                         Notes on pacing, habits, and recovery.
                     </p>
@@ -198,7 +198,7 @@
                 </article>
 
                 <article>
-                    <h3>Pros and Cons of AI in Code Development</h3>
+                    <h3 class="font-semibold">Pros and Cons of AI in Code Development</h3>
                     <p>
                         Where it helps, where it hurts, how to use it well.
                     </p>
@@ -233,8 +233,6 @@
     </style>
 
     <script>
-        // TODO: Rotating word list
-        const words = ["developing", "coding", "fixing bugs", "solving problems"];
         const root = document.documentElement;
 
         document.getElementById("theme-toggle")?.addEventListener("click", toggleTheme);
@@ -242,7 +240,7 @@
 
         // default to light theme (TODO: detect system preference)
         root.classList.add("light");
-
+        // TODO change dark theme toggle to sun/moon icons
         // todo: persist theme preference in localStorage
         function toggleTheme() {
             const isLight = root.classList.toggle("light");
@@ -256,7 +254,19 @@
             console.log("isLight", isLight)
         }
 
-        // TODO change dark theme toggle to sun/moon icons
+        const words = ["developing", "coding", "fixing bugs", "solving problems"];
+        const wordEl = document.getElementById("rotating-word");
+        let i = 0;
+
+        // Rotate words
+        setInterval(() => {
+            i = (i + 1) % words.length;
+            wordEl.style.opacity = "0";
+            setTimeout(() => {
+                wordEl.textContent = words[i];
+                wordEl.style.opacity = "1";
+            }, 160);
+        }, 1800);
     </script>
 </body>
 </html>
