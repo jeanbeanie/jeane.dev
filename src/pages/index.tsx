@@ -1,5 +1,11 @@
 
 export default function Home() {
+    function toggleTheme() {
+        const root = document.documentElement;
+        const isDark = root.classList.toggle("dark");
+        localStorage.setItem("theme", isDark ? "dark" : "light");
+    }
+
     return (
         <>
             {/* Top navbar */}
@@ -19,7 +25,7 @@ export default function Home() {
                             Download Resume
                         </a>
 
-                        <button id="theme-toggle" type="button" aria-label="Toggle dark mode">
+                        <button onClick={toggleTheme} type="button" aria-label="Toggle dark mode">
                             Dark
                         </button>
                     </nav>
