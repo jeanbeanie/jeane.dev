@@ -42,6 +42,7 @@ export default function ThemeToggle() {
         <button
             type="button"
             onClick={toggle}
+            className="cursor-pointer rounded px-2 py-1 text-sm transition-colors hover:bg-black/10 dark:hover:bg-white/10"
             aria-label="Toggle theme"
             aria-pressed={theme === "dark"}
         >
