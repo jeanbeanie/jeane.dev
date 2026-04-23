@@ -1,4 +1,4 @@
-
+import ThemeToggle from "../components/ThemeToggle";
 export default function Home() {
     function toggleTheme() {
         const root = document.documentElement;
@@ -25,9 +25,7 @@ export default function Home() {
                             Download Resume
                         </a>
 
-                        <button onClick={toggleTheme} type="button" aria-label="Toggle dark mode">
-                            Dark
-                        </button>
+                        <ThemeToggle/>
                     </nav>
 
                     {/* Mobile */}
