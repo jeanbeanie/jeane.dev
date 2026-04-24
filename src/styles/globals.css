@@ -36,3 +36,37 @@ body {
 nav a {
     padding: 0px 10px;
 }
+
+@layer components {
+    .container-page {
+        @apply mx-auto max-w-5xl px-4;
+    }
+
+    .section {
+        @apply py-14 md:py-16;
+    }
+
+    .divider {
+        @apply border-t border-foreground/10;
+    }
+
+    .section-title {
+        @apply text-2xl font-semibold tracking-tight;
+    }
+
+    .section-subtitle {
+        @apply mt-2 text-sm text-foreground/60;
+    }
+
+    .card {
+        @apply rounded-2xl border border-foreground/10 bg-background p-6;
+    }
+
+    .chip {
+        @apply inline-flex items-center rounded-full border border-foreground/15 px-3 py-1 text-xs font-medium text-foreground/80;
+    }
+
+    .link {
+        @apply font-semibold text-accent hover:underline;
+    }
+}
