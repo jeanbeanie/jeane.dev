@@ -1,15 +1,10 @@
 import ThemeToggle from "../components/ThemeToggle";
 export default function Home() {
-    function toggleTheme() {
-        const root = document.documentElement;
-        const isDark = root.classList.toggle("dark");
-        localStorage.setItem("theme", isDark ? "dark" : "light");
-    }
 
     return (
         <>
             {/* Top navbar */}
-            <header className="sticky top-0 backdrop-blur border-b border-black/10 bg-paper/80 dark:border-white/10 dark:bg-ink/70">
+            <header className="sticky top-0 backdrop-blur border-b border-black/10 bg-background/80 dark:border-white/10 dark:bg-background/70">
                 <div className="flex max-w-5xl mx-auto items-center justify-between px-4 py-4">
                     <a href="#top">
                         <div>Jeane</div>

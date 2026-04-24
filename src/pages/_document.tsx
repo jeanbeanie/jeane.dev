@@ -20,7 +20,7 @@ export default function Document() {
                   }}
               />
           </Head>
-      <body className="antialiased antialiased bg-paper text-slate dark:bg-ink dark:text-white">
+      <body className="antialiased bg-background text-foreground dark:bg-background dark:text-foreground">
         <Main />
         <NextScript />
       </body>
