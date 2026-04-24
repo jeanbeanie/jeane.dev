@@ -155,7 +155,7 @@ export default function Home() {
                     </div>
 
                     <div className="mt-8 text-sm text-foreground/60">
-                        <span className="font-semibold text-accent">&lt;&lt;</span> More posts (coming soon)
+                        <a href="/blog"><span className="font-semibold text-accent">&lt;&lt; </span>More posts (coming soon)</a>
                     </div>
                 </section>
             </main>
