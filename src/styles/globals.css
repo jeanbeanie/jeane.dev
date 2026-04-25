@@ -37,6 +37,7 @@ nav a {
     padding: 0px 10px;
 }
 
+/* Custom component styles */
 @layer components {
     .container-page {
         @apply mx-auto max-w-5xl px-4;
@@ -69,4 +70,59 @@ nav a {
     .link {
         @apply font-semibold text-accent hover:underline;
     }
+}
+
+/* Minimal prose styles for blog posts */
+@layer components {
+    .prose-min {
+        @apply text-foreground/85 leading-relaxed;
+    }
+
+        .prose-min :where(p) {
+            @apply my-4;
+        }
+
+        .prose-min :where(h2) {
+            @apply mt-10 mb-3 text-2xl font-semibold tracking-tight text-foreground;
+        }
+
+        .prose-min :where(h3) {
+            @apply mt-8 mb-2 text-xl font-semibold tracking-tight text-foreground;
+        }
+
+        .prose-min :where(ul) {
+            @apply my-4 list-disc pl-6;
+        }
+
+        .prose-min :where(ol) {
+            @apply my-4 list-decimal pl-6;
+        }
+
+        .prose-min :where(li) {
+            @apply my-1;
+        }
+
+        .prose-min :where(a) {
+            @apply text-accent underline underline-offset-4;
+        }
+
+        .prose-min :where(blockquote) {
+            @apply my-6 border-l-2 border-foreground/15 pl-4 text-foreground/75;
+        }
+
+        .prose-min :where(code) {
+            @apply rounded bg-foreground/10 px-1.5 py-0.5 text-[0.9em];
+        }
+
+        .prose-min :where(pre) {
+            @apply my-6 overflow-x-auto rounded-xl border border-foreground/10 bg-foreground/5 p-4;
+        }
+
+        .prose-min :where(pre code) {
+            @apply bg-transparent p-0;
+        }
+
+        .prose-min :where(hr) {
+            @apply my-10 border-foreground/10;
+        }
 }
