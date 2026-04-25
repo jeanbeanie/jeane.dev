@@ -42,7 +42,7 @@ export function getAllPosts(): PostMeta[] {
     return posts;
 }
 
-export function getPostBySlug(slug: string): PostMeta & { content: string } {
+export function getPostBySlug(slug: string): { meta: PostMeta; content: string } {
     const filenames = fs.readdirSync(postsDirectory).filter((f) => f.endsWith('.md'));
     const filename = filenames.find((name) => {
         const filePath = path.join(postsDirectory, name);
@@ -58,10 +58,9 @@ export function getPostBySlug(slug: string): PostMeta & { content: string } {
     const fullPath = path.join(postsDirectory, filename);
     const fileContents = fs.readFileSync(fullPath, 'utf8');
     const { data, content } = matter(fileContents);
-    const meta = data as PostMeta;
 
     return {
-        ...meta,
+        meta: data as PostMeta,
         content,
     };
 }
