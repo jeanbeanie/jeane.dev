@@ -77,19 +77,31 @@ export default function Home() {
             <div className="mt-10 grid gap-6 md:grid-cols-3">
                 <article className="card">
                     <h3 className="font-semibold">Tiny Games</h3>
-                    <p className="mt-2 text-sm text-foreground/60">Collection of small vanilla JS games.</p>
+                        <p className="mt-2 text-sm text-foreground/60">Collection of small vanilla JS games.</p>
+                        <ul className="mt-2 text-sm text-foreground/60">
+                            <li><b>Tech:</b> HTML, CSS, JavaScript</li>
+                            <li><b>Features:</b> Multiple mini-games, score tracking, responsive design</li>
+                        </ul>
                     <a className="link mt-4 inline-block text-sm" href="#">View →</a>
                 </article>
 
                 <article className="card">
                     <h3 className="font-semibold">PomoRPG</h3>
-                    <p className="mt-2 text-sm text-foreground/60">Productivity tool and tracker.</p>
+                        <p className="mt-2 text-sm text-foreground/60">Productivity tool and tracker.</p>
+                        <ul className="mt-2 text-sm text-foreground/60">
+                            <li><b>Tech:</b> Vite, HTML, CSS, JavaScript</li>
+                            <li><b>Features:</b> Productivity tracking, task management, gamification elements</li>
+                        </ul>
                     <a className="link mt-4 inline-block text-sm" href="#">View →</a>
                 </article>
 
                 <article className="card">
                     <h3 className="font-semibold">Custom Biome Lumber Camps</h3>
-                    <p className="mt-2 text-sm text-foreground/60">Rimworld mod project.</p>
+                        <p className="mt-2 text-sm text-foreground/60">Rimworld mod project.</p>
+                        <ul className="mt-2 text-sm text-foreground/60">
+                            <li><b>Tech:</b> C++, XML, Unity</li>
+                            <li><b>Features:</b> Custom biomes, lumber camps, modding tools</li>
+                        </ul>
                     <a className="link mt-4 inline-block text-sm" href="#">View →</a>
                 </article>
             </div>
@@ -114,7 +126,7 @@ export default function Home() {
                 <article className="card">
                     <h3 className="font-semibold">Building Endurance To Resist Burnout</h3>
                     <p className="mt-2 text-sm text-foreground/60">Notes on pacing, habits, and recovery.</p>
-                    <a className="link mt-4 inline-block text-sm" href="#">Read →</a>
+                    <a className="link mt-4 inline-block text-sm" href="/blog/building-endurance-to-resist-burnout">Read →</a>
                 </article>
 
                 <article className="card">
