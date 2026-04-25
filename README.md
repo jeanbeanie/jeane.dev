@@ -2,4 +2,4 @@
 
 `hello world!`
 
-My projects, blog, and other work can be found here.
+My projects, dev blog, and other work can be found here.
