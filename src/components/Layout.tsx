@@ -7,16 +7,16 @@ export default function Layout({ children }: { children: React.ReactNode }) {
         <header className = "sticky top-0 z-50 backdrop-blur border-b border-foreground/10 bg-background/80">
             <div className="container-page flex items-center justify-between py-4">
                 <a href="/" className="leading-tight">
-                    <div className="text-sm font-semibold tracking-tight">Jeane</div>
-                    <div className="text-sm font-semibold tracking-tight">Ramos</div>
+                    <div className="text-base font-semibold tracking-tight">Jeane</div>
+                    <div className="text-xs tracking-tight text-foreground/60">Ramos</div>
                 </a>
 
-                <nav className="hidden items-center gap-5 text-sm md:flex">
+                <nav className="hidden items-center gap-3 text-sm md:flex">
                     <a className="px-2 text-foreground/70 hover:text-foreground" href="/#skills">Skills</a>
                     <a className="px-2 text-foreground/70 hover:text-foreground" href="/#projects">Projects</a>
                     <a className="px-2 text-foreground/70 hover:text-foreground" href="/blog">Blog</a>
 
-                    <a className="px-2 text-foreground/70 hover:text-foreground" href="#" title="PDF Resume">
+                    <a className="px-3 py-2 border rounded-xl border-foreground/20 text-foreground/70 hover:text-foreground" href="#" title="PDF Resume">
                         Download Resume
                     </a>
 

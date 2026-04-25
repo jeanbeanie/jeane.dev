@@ -1,3 +1,6 @@
+// BLOG INDEX
+// src/pages/blog/index.tsx
+
 import { getAllPosts } from '@/lib/posts';
 import Head from 'next/head';
 import Link from 'next/link';
