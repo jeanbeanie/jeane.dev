@@ -31,7 +31,8 @@ export default function Home() {
                     <div className="mt-4 flex flex-wrap gap-2">
                         <span className="chip">React</span>
                         <span className="chip">HTML</span>
-                        <span className="chip">CSS</span>
+                            <span className="chip">CSS</span>
+                            <span className="chip">Vanilla JS</span>
                         <span className="chip">Tailwind</span>
                         <span className="chip">Accessibility</span>
                     </div>
