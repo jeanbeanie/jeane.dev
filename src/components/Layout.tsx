@@ -3,9 +3,8 @@ import ThemeToggle from "../components/ThemeToggle";
 export default function Layout({ children }: { children: React.ReactNode }) {
     return (
         <>
-
-        {/* Top navbar */ }
-        < header className = "sticky top-0 z-50 backdrop-blur border-b border-foreground/10 bg-background/80" >
+        {/* Top navbar */}
+        <header className = "sticky top-0 z-50 backdrop-blur border-b border-foreground/10 bg-background/80">
             <div className="container-page flex items-center justify-between py-4">
                 <a href="/" className="leading-tight">
                     <div className="text-sm font-semibold tracking-tight">Jeane</div>
@@ -13,11 +12,11 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                 </a>
 
                 <nav className="hidden items-center gap-5 text-sm md:flex">
-                    <a className="text-foreground/70 hover:text-foreground" href="/#skills">Skills</a>
-                    <a className="text-foreground/70 hover:text-foreground" href="/#projects">Projects</a>
-                    <a className="text-foreground/70 hover:text-foreground" href="/blog">Blog</a>
+                    <a className="px-2 text-foreground/70 hover:text-foreground" href="/#skills">Skills</a>
+                    <a className="px-2 text-foreground/70 hover:text-foreground" href="/#projects">Projects</a>
+                    <a className="px-2 text-foreground/70 hover:text-foreground" href="/blog">Blog</a>
 
-                    <a className="text-foreground/70 hover:text-foreground" href="#" title="PDF Resume">
+                    <a className="px-2 text-foreground/70 hover:text-foreground" href="#" title="PDF Resume">
                         Download Resume
                     </a>
 
@@ -27,7 +26,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                 {/* Mobile */}
                 <div className="flex items-center gap-2 md:hidden">
                     <ThemeToggle />
-                    <a className="rounded-xl border border-foreground/15 px-3 py-2 text-sm" href="#skills">
+                    <a className="rounded-xl border border-foreground/15 px-3 py-2 text-sm" href="/#skills">
                         Menu
                     </a>
                 </div>
