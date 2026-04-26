@@ -1,18 +1,20 @@
 // HOMEPAGE
 // src/pages/index.tsx
+import RotatingWord from "@/components/RotatingWord";
 
 export default function Home() {
     return (
         <>
         {/* Hero Section */}
-        <section className="section">
+            <section className="section">
             <div className="max-w-2xl">
-                <p className="text-sm text-foreground/60">Hello world, I’m</p>
+                <p className="text-sm text-foreground/70">Hello world, I’m</p>
                 <h1 className="mt-2 text-4xl font-semibold tracking-tight md:text-5xl">
                     Jeane Ramos
                 </h1>
                 <p className="mt-5 text-lg text-foreground/75">
-                    I’m in love with <span className="font-semibold text-accent">developing</span>.
+                        I’m a self taught software developer that is in love with {" "}
+                        <RotatingWord words={["building", "coding", "fixing bugs", "solving problems", "learning new techs"]} />.
                 </p>
             </div>
         </section>
