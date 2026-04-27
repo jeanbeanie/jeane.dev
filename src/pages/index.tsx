@@ -7,16 +7,33 @@ export default function Home() {
         <>
         {/* Hero Section */}
             <section className="section">
-            <div className="max-w-2xl">
-                <p className="text-sm text-foreground/70">Hello world, I’m</p>
-                <h1 className="mt-2 text-4xl font-semibold tracking-tight md:text-5xl">
-                    Jeane Ramos
-                </h1>
-                <p className="mt-5 text-lg text-foreground/75">
-                        I’m a self taught software developer that is in love with {" "}
-                        <RotatingWord words={["building", "coding", "fixing bugs", "solving problems", "learning new techs"]} />.
-                </p>
-            </div>
+                <div className="grid gap-10 md:grid-cols-[320px_1fr] md:items-center">
+
+                    {/* Image below text on mobile, positioned left to text on desktop */}
+                    <div className="mx-auto w-full max-w-[320px] order-2 md:order-1">
+                        <div className="aspect-square overflow-hidden rounded-2xl border border-foreground/10 bg-foreground/1 shadow-sm">
+                            <img
+                                src="/jeane.jpg"
+                                alt="Stylized drawing of Jeane Ramos"
+                                className="h-full w-full object-cover"
+                                loading="eager"
+                            />
+                        </div>
+                        {/* Optional small caption */}
+                        {/* <p className="mt-3 text-center text-xs text-foreground/60">Frontend engineer • React • TypeScript</p> */}
+                    </div>
+
+                    <div className="order-1 md:order-2 max-w-2xl">
+                        <p className="text-sm text-foreground/70">Hello world, I’m</p>
+                        <h1 className="mt-2 text-4xl font-semibold tracking-tight md:text-5xl">
+                            Jeane Ramos
+                        </h1>
+                        <p className="mt-5 text-lg text-foreground/75">
+                                I’m a self taught software developer that is in love with {" "}
+                                <RotatingWord words={["building", "coding", "fixing bugs", "solving problems", "learning new techs"]} />.
+                        </p>
+                    </div>
+                </div>
         </section>
 
         <hr className="divider" />
