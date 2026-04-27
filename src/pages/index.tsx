@@ -285,7 +285,7 @@ export default function Home() {
                 <article className="card">
                     <h3 className="font-semibold">Pros and Cons of AI in Code Development</h3>
                     <p className="mt-2 text-sm text-foreground/60">Where it helps, where it hurts, how to use it well.</p>
-                    <a className="link mt-4 inline-block text-sm" href="#">Read →</a>
+                    <a className="link mt-4 inline-block text-sm" href="/blog/pros-and-cons-of-ai-code-development">Read →</a>
                 </article>
             </div>
 
