@@ -11,11 +11,11 @@ export default function Home() {
 
                     {/* Image below text on mobile, positioned left to text on desktop */}
                     <div className="mx-auto w-full max-w-[320px] order-2 md:order-1">
-                        <div className="aspect-square overflow-hidden rounded-2xl border border-foreground/10 bg-foreground/1 shadow-sm">
+                        <div className="aspect-square overflow-hidden rounded-2xl border border-foreground/10 bg-foreground/5 p-6 shadow-sm">
                             <img
                                 src="/jeane.jpg"
                                 alt="Stylized drawing of Jeane Ramos"
-                                className="h-full w-full object-cover"
+                                className="h-full w-full object-contain"
                                 loading="eager"
                             />
                         </div>
