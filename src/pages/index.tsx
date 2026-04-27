@@ -1,6 +1,7 @@
 // HOMEPAGE
 // src/pages/index.tsx
 import RotatingWord from "@/components/RotatingWord";
+import Link from 'next/link';
 
 export default function Home() {
     return (
@@ -279,7 +280,7 @@ export default function Home() {
                 <article className="card">
                     <h3 className="font-semibold">Building Endurance To Resist Burnout</h3>
                     <p className="mt-2 text-sm text-foreground/60">Notes on pacing, habits, and recovery.</p>
-                    <a className="link mt-4 inline-block text-sm" href="/blog/building-endurance-to-resist-burnout">Read →</a>
+                    <Link className="link mt-4 inline-block text-sm" href="/blog/building-endurance-to-resist-burnout">Read →</Link>
                 </article>
 
                 <article className="card">
@@ -290,7 +291,7 @@ export default function Home() {
             </div>
 
             <div className="mt-8 text-sm text-foreground/60">
-                <a href="/blog"><span className="font-semibold text-accent">&lt;&lt; </span>More posts (coming soon)</a>
+                <Link href="/blog"><span className="font-semibold text-accent">&lt;&lt; </span>More posts (coming soon)</Link>
             </div>
         </section>
         </>
