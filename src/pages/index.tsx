@@ -1,9 +1,10 @@
 // HOMEPAGE
 // src/pages/index.tsx
 import RotatingWord from "@/components/RotatingWord";
+import { getAllPosts, type PostMeta } from "@/lib/posts";
 import Link from 'next/link';
 
-export default function Home() {
+export default function Home({ latestPosts }: { latestPosts: PostMeta[] }) {
     return (
         <>
         {/* Hero Section */}
@@ -277,17 +278,16 @@ export default function Home() {
             </p>
 
             <div className="mt-10 grid gap-6 md:grid-cols-2">
-                <article className="card">
-                    <h3 className="font-semibold">Building Endurance To Resist Burnout</h3>
-                    <p className="mt-2 text-sm text-foreground/60">Notes on pacing, habits, and recovery.</p>
-                    <Link className="link mt-4 inline-block text-sm" href="/blog/building-endurance-to-resist-burnout">Read →</Link>
-                </article>
-
-                <article className="card">
-                    <h3 className="font-semibold">Pros and Cons of AI in Code Development</h3>
-                    <p className="mt-2 text-sm text-foreground/60">Where it helps, where it hurts, how to use it well.</p>
-                    <a className="link mt-4 inline-block text-sm" href="/blog/pros-and-cons-of-ai-code-development">Read →</a>
-                </article>
+                {latestPosts.map((post) => (
+                    <article key={post.slug} className="card">
+                        <div className="text-xs text-foreground/60">{post.date}</div>
+                        <h3 className="mt-2 font-semibold">{post.title}</h3>
+                        <p className="mt-2 text-sm text-foreground/60">{post.description}</p>
+                        <Link className="link mt-4 inline-block text-sm" href={`/blog/${post.slug}`}>
+                            Read →
+                        </Link>
+                    </article>
+                ))}
             </div>
 
             <div className="mt-8 text-sm text-foreground/60">
@@ -296,4 +296,12 @@ export default function Home() {
         </section>
         </>
     );
+}
+
+export function getStaticProps() {
+    const allPosts = getAllPosts();
+    const latestPosts = allPosts.slice(0, 2);
+    return {
+        props: { latestPosts },
+    };
 }
