@@ -42,8 +42,8 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                 <div className="container-page flex flex-col gap-3 text-sm md:flex-row md:items-center md:justify-between">
                     <div className="text-foreground/60">© 2026 Jeane Ramos</div>
                     <div className="flex gap-4">
-                        <a className="text-foreground/70 hover:text-foreground" href="#">LinkedIn</a>
-                        <a className="text-foreground/70 hover:text-foreground" href="#">GitHub</a>
+                        <a className="text-foreground/70 hover:text-foreground" href="https://www.linkedin.com/in/jeane-ramos-83339399/">LinkedIn</a>
+                        <a className="text-foreground/70 hover:text-foreground" href="https://github.com/jeanbeanie">GitHub</a>
                         <a className="text-foreground/70 hover:text-foreground" href="#">Twitter</a>
                     </div>
                 </div>

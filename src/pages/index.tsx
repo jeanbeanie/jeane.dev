@@ -62,6 +62,9 @@ export default function Home({ latestPosts }: { latestPosts: PostMeta[] }) {
                             <span className="chip">Accessibility</span>
                             <span className="chip">Responsive UI</span>
                         </div>
+                        <p className="mt-4 text-sm text-foreground/60">
+                            My passion lies in building and deploying unique ideas from start to finish.
+                        </p>
                     </div>
 
                     <div className="card">
@@ -72,9 +75,10 @@ export default function Home({ latestPosts }: { latestPosts: PostMeta[] }) {
                             <span className="chip">Debugging</span>
                             <span className="chip">Production Fixes</span>
                             <span className="chip">Git / GitHub</span>
+                            <span className="chip">Copilot</span>
                         </div>
                         <p className="mt-4 text-sm text-foreground/60">
-                            I like keeping UI predictable: clear state, small components, and tests where they pay off.
+                            I focus on writing clean, maintainable code by utilizing testing and modern tools.
                         </p>
                     </div>
 
@@ -87,6 +91,7 @@ export default function Home({ latestPosts }: { latestPosts: PostMeta[] }) {
                             <span className="chip">Postgres</span>
                             <span className="chip">Ruby on Rails</span>
                             <span className="chip">PHP (LAMP)</span>
+                            <span className="chip">Bash / Vim</span>
                         </div>
                         <p className="mt-4 text-sm text-foreground/60">
                             Comfortable shipping end-to-end features and collaborating across the stack.
