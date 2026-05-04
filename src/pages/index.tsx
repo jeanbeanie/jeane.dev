@@ -10,21 +10,7 @@ export default function Home({ latestPosts }: { latestPosts: PostMeta[] }) {
         {/* Hero Section */}
             <section className="section">
                 <div className="grid gap-10 md:grid-cols-[320px_1fr] md:items-center">
-
-                    {/* Image below text on mobile, positioned left to text on desktop */}
-                    <div className="mx-auto w-full max-w-[320px] order-2 md:order-1">
-                        <div className="aspect-square overflow-hidden rounded-2xl border border-foreground/10 bg-foreground/5 p-6 shadow-sm">
-                            <img
-                                src="/jeane.jpg"
-                                alt="Stylized drawing of Jeane Ramos"
-                                className="h-full w-full object-contain"
-                                loading="eager"
-                            />
-                        </div>
-                        {/* Optional small caption */}
-                        {/* <p className="mt-3 text-center text-xs text-foreground/60">Frontend engineer • React • TypeScript</p> */}
-                    </div>
-
+                    { /* Placeholder for profile image or illustration */ }
                     <div className="order-1 md:order-2 max-w-2xl">
                         <p className="text-sm text-foreground/70">Hello world, I’m</p>
                         <h1 className="mt-2 text-4xl font-semibold tracking-tight md:text-5xl">
