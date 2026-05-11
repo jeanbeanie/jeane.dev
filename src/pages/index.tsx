@@ -59,8 +59,10 @@ export default function Home({ latestPosts }: { latestPosts: PostMeta[] }) {
                             <span className="chip">Jest</span>
                             <span className="chip">Component Testing</span>
                             <span className="chip">Debugging</span>
+                            <span className="chip">CI/CD</span>
+                            <span className="chip">Git</span>
                             <span className="chip">Production Fixes</span>
-                            <span className="chip">Git / GitHub</span>
+                            <span className="chip">GitHub Actions</span>
                             <span className="chip">Copilot</span>
                         </div>
                         <p className="mt-4 text-sm text-foreground/60">
