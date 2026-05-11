@@ -31,8 +31,16 @@ jobs:
         with:
           node-version: 20
 
+      - name: Debug pnpm environment
+        run: |
+          pnpm --version
+          pnpm config list
+          pnpm store path || true
+
       - name: Install dependencies
-        run: pnpm install --frozen-lockfile
+        run: |
+          pnpm config set store-dir ~/.pnpm-store
+          pnpm install --frozen-lockfile
 
       - name: Build (static export)
         run: pnpm run build
