@@ -38,6 +38,9 @@ jobs:
       - name: Build (static export)
         run: pnpm run build
 
+      - name: Generate sitemap
+        run: pnpm exec next-sitemap
+
       # Next export output will be in ./out when output: "export" is set
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
