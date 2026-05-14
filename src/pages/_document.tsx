@@ -7,7 +7,9 @@ export default function Document() {
   return (
     <Html lang="en">
           <Head>
-              
+              <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+              <link rel="icon" type="image/png" sizes="512x512" href="/favicon-512.png" />    
+
               <GoogleAnalytics gaId="G-Q8LY2ZE0Q2" />
               <script
                   dangerouslySetInnerHTML={{
