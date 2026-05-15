@@ -176,7 +176,7 @@ Now, we can make API requests from our React app (using `fetch("/api/users")`, f
 To make it easier to run both the client and server at the same time, we can add a script to the root `package.json` that uses `concurrently` to run both dev servers together.
 First, install `concurrently` as a dev dependency in the root of your monorepo:
 ```
-pnpm add -D concurrently
+pnpm add -D -w concurrently
 ```
 Then, update the root `package.json` to include a new script `dev` that utilizes the `concurrently` package:
 ```json
