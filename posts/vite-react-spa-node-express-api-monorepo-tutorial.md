@@ -32,11 +32,20 @@ Upon creation, the `package.json` file will look something like this:
 ```
 {
   "name": "my-monorepo",
-  "private": true
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "packageManager": "pnpm@10.19.0"
 }
 ```
 
-Next we want to create a `pnpm-workspace.yaml` file in the root of the repository to define our workspace:
+Next we want to create a `pnpm-workspace.yaml` file in the root of the repository to define our workspace, add the following:
 ```yaml
 packages:
   - "client"
@@ -98,21 +107,27 @@ Go into `server/package.json`, edit it to be ESM and add a dev script, it should
 ```json
 {
   "name": "server",
-  "private": true,
   "type": "module",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
   "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "tsx watch src/index.ts"
   },
+  "license": "ISC",
+  "packageManager": "pnpm@10.19.0",
   "dependencies": {
-    "express": "^4.0.0"
+    "express": "^5.2.1"
   },
   "devDependencies": {
-    "@types/express": "^4.0.0",
-    "@types/node": "^20.0.0",
-    "tsx": "^4.0.0",
-    "typescript": "^5.0.0"
+    "@types/express": "^5.0.6",
+    "@types/node": "^24.12.4",
+    "tsx": "^4.22.0",
+    "typescript": "~6.0.3"
   }
 }
+
 ```
 Create a file named `server/src/index.ts` with this basic code:
 ```typescript
@@ -163,16 +178,17 @@ First, install `concurrently` as a dev dependency in the root of your monorepo:
 ```
 pnpm add -D concurrently
 ```
-Then, update the root `package.json` to include a new script:
+Then, update the root `package.json` to include a new script `dev` that utilizes the `concurrently` package:
 ```json
 {
-  "private": true,
+  "name": "my-monorepo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
   "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "concurrently -n server,client -c blue,green \"pnpm --filter server dev\" \"pnpm --filter client dev\""
   },
-  "devDependencies": {
-    "concurrently": "^9.0.0"
-  }
 }
 ```
 Then, install all workspace dependencies from the root:
