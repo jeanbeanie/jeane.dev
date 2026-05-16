@@ -22,7 +22,7 @@ export default function Home({ latestPosts }: { latestPosts: PostMeta[] }) {
                                 "building cool things", 
                                 "clean code", 
                                 "fixing tricky bugs", 
-                                "solving interesting problems", 
+                                "solving problems", 
                                 "learning new techs"
                                 ]}
                             />.
