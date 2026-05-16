@@ -183,6 +183,28 @@ export default function Home({ latestPosts }: { latestPosts: PostMeta[] }) {
                 </h3>
 
                 <div className="mt-4 grid gap-6 md:grid-cols-3">
+
+                    <article className="card">
+                        <h4 className="font-semibold">ImSoCode</h4>
+                        <p className="mt-2 text-sm text-foreground/60">
+                            A tutorial + project blog I built and ran in the 2010s, to teach LAMP stack to the world.
+                        </p>
+                        <ul className="mt-4 space-y-1 text-sm text-foreground/70">
+                            <li><b>Role:</b> PHP Developer & Site Admin</li>
+                            <li><b>Highlights:</b> Built from scratch, wrote tutorials, maintained content + community</li>
+                        </ul>
+                        <div className="mt-5 flex flex-wrap gap-4 text-sm">
+                            <a
+                                className="link"
+                                href="https://web.archive.org/web/20131005043222/http://imsocode.com:80/?p=285"
+                                target="_blank"
+                                rel="noreferrer"
+                            >
+                                Archive →
+                            </a>
+                        </div>
+                    </article>
+
                     <article className="card">
                         <h4 className="font-semibold">Conway’s Game of Life</h4>
                         <p className="mt-2 text-sm text-foreground/60">
@@ -225,26 +247,6 @@ export default function Home({ latestPosts }: { latestPosts: PostMeta[] }) {
                         </div>
                     </article>
 
-                    <article className="card">
-                        <h4 className="font-semibold">ImSoCode</h4>
-                        <p className="mt-2 text-sm text-foreground/60">
-                            A tutorial + project blog I built and ran, with active comments and ongoing posts.
-                        </p>
-                        <ul className="mt-4 space-y-1 text-sm text-foreground/70">
-                            <li><b>Role:</b> PHP Developer & Site Admin</li>
-                            <li><b>Highlights:</b> Built from scratch, wrote tutorials, maintained content + community</li>
-                        </ul>
-                        <div className="mt-5 flex flex-wrap gap-4 text-sm">
-                            <a
-                                className="link"
-                                href="https://web.archive.org/web/20131005043222/http://imsocode.com:80/?p=285"
-                                target="_blank"
-                                rel="noreferrer"
-                            >
-                                Archive →
-                            </a>
-                        </div>
-                    </article>
                 </div>
 
                
