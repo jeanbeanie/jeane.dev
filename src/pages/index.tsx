@@ -17,8 +17,15 @@ export default function Home({ latestPosts }: { latestPosts: PostMeta[] }) {
                             Jeane Ramos
                         </h1>
                         <p className="mt-5 text-lg text-foreground/75">
-                                I’m a self taught software developer that is in love with {" "}
-                                <RotatingWord words={["building", "coding", "fixing bugs", "solving problems", "learning new techs"]} />.
+                            I’m a self taught software developer that is in love with {" "}
+                            <RotatingWord words={[
+                                "building cool things", 
+                                "clean code", 
+                                "fixing tricky bugs", 
+                                "solving interesting problems", 
+                                "learning new techs"
+                                ]}
+                            />.
                         </p>
                     </div>
                 </div>
