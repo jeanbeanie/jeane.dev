@@ -187,7 +187,7 @@ export default function Home({ latestPosts }: { latestPosts: PostMeta[] }) {
                     <article className="card">
                         <h4 className="font-semibold">ImSoCode</h4>
                         <p className="mt-2 text-sm text-foreground/60">
-                            A tutorial + project blog I built and ran in the 2010s, to teach LAMP stack to the world.
+                            A tutorial + project blog I built and ran in the 2010s to teach others LAMP stack.
                         </p>
                         <ul className="mt-4 space-y-1 text-sm text-foreground/70">
                             <li><b>Role:</b> PHP Developer & Site Admin</li>
