@@ -176,7 +176,7 @@ Now, we can make API requests from our React app (using `fetch("/api/users")`, f
 To make it easier to run both the client and server at the same time, we can add a script to the root `package.json` that uses `concurrently` to run both dev servers together.
 First, install `concurrently` as a dev dependency in the root of your monorepo:
 ```
-pnpm add -D concurrently
+pnpm add -D -w concurrently
 ```
 Then, update the root `package.json` to include a new script `dev` that utilizes the `concurrently` package:
 ```json
@@ -208,5 +208,5 @@ You are managing both projects in a single repository, share code between them i
 From here, expanding can be done in a number of ways, you could add a shared package for common types or utilities, 
 set up testing with Jest or Vitest, add linting and formatting with ESLint and Prettier, or even set up CI/CD pipelines to automate your development workflow.
 
-Check out the code for this tutorial on [GitHub](), and feel free to find me on [Twitter]() if you have any questions or want to share your own monorepo setup with me.
+Check out the code for this tutorial on [GitHub](https://github.com/jeanbeanie/monorepo-react-express-api-tutorial), and feel free to find me on [Twitter](https://x.com/onlyjeanbean) if you have any questions or want to share your own monorepo setup with me.
 
