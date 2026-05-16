@@ -44,7 +44,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                     <div className="flex gap-4">
                         <a className="text-foreground/70 hover:text-foreground" href="https://www.linkedin.com/in/jeane-ramos-83339399/">LinkedIn</a>
                         <a className="text-foreground/70 hover:text-foreground" href="https://github.com/jeanbeanie">GitHub</a>
-                        <a className="text-foreground/70 hover:text-foreground" href="#">Twitter</a>
+                        <a className="text-foreground/70 hover:text-foreground" href="https://x.com/onlyjeanbean">Twitter</a>
                     </div>
                 </div>
             </footer>
