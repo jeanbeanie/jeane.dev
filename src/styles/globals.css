@@ -36,7 +36,7 @@ body {
 /* Custom component styles */
 @layer components {
     .container-page {
-        @apply mx-auto max-w-5xl px-4;
+        @apply mx-auto max-w-6xl px-4;
     }
 
     .section {
