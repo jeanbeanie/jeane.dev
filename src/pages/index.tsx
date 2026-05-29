@@ -109,7 +109,29 @@ export default function Home({ latestPosts }: { latestPosts: PostMeta[] }) {
                 </p>
 
                 {/* Featured */}
-                <div className="mt-10 grid gap-6 md:grid-cols-3">
+                <div className="mt-10 grid gap-6 md:grid-cols-4">
+                    <article className="card">
+                        <h3 className="font-semibold">Better YouTube TV</h3>
+                        <p className="mt-2 text-sm text-foreground/60">
+                          <bold>[In early development]</bold> A personal YouTube viewing dashboard for directly watching the most recent uploads from only the channels you’re subscribed to. 
+                          A TV queue for your subscriptions. 
+                        </p>
+                        <ul className="mt-4 space-y-1 text-sm text-foreground/70">
+                            <li><b>Tech:</b> React, Vite, Express, Postgres, Google APIs</li>
+                            <li><b>Highlights:</b> caching, Node APIs/Middleware, custom Player component</li>
+                        </ul>
+                        <div className="mt-5 flex flex-wrap gap-4 text-sm">
+                            <a
+                                className="link"
+                                href="https://github.com/jeanbeanie/better-yt-tv"
+                                target="_blank"
+                                rel="noreferrer"
+                            >
+                                Code →
+                            </a>
+                        </div>
+                    </article>
+
                     <article className="card">
                         <h3 className="font-semibold">PomoRPG</h3>
                         <p className="mt-2 text-sm text-foreground/60">
@@ -117,7 +139,7 @@ export default function Home({ latestPosts }: { latestPosts: PostMeta[] }) {
                         </p>
                         <ul className="mt-4 space-y-1 text-sm text-foreground/70">
                             <li><b>Tech:</b> React, TypeScript, Vite</li>
-                            <li><b>Highlights:</b> Timer state flow, UI feedback loops, component structure</li>
+                            <li><b>Highlights:</b> Timer state flow, UI feedback loops</li>
                         </ul>
                         <div className="mt-5 flex flex-wrap gap-4 text-sm">
                             <a
@@ -134,7 +156,8 @@ export default function Home({ latestPosts }: { latestPosts: PostMeta[] }) {
                     <article className="card">
                         <h3 className="font-semibold">Tiny Games</h3>
                         <p className="mt-2 text-sm text-foreground/60">
-                            A collection of small vanilla JS games, including Colony Clicker and Tiny Pets: quick experiments for practicing logic, polish, and fun.
+                            A collection of small vanilla JS games, including Colony Clicker and Tiny Pets: quick experiments for staying sharp with bare bones Javascript 
+                              while providing a creative outlet.
                         </p>
                         <ul className="mt-4 space-y-1 text-sm text-foreground/70">
                             <li><b>Tech:</b> HTML, CSS, JavaScript</li>
@@ -189,7 +212,29 @@ export default function Home({ latestPosts }: { latestPosts: PostMeta[] }) {
                     More projects
                 </h3>
 
-                <div className="mt-4 grid gap-6 md:grid-cols-3">
+                <div className="mt-4 grid gap-6 md:grid-cols-4">
+
+                    <article className="card">
+                        <h4 className="font-semibold">project-switcher.nvim</h4>
+                        <p className="mt-2 text-sm text-foreground/60">
+                          A small neovim plugin for quick switching between projects. Restore project sessions in a single Neovim instance: 
+                          selecting a project changes the working directory and restores that project's session automatically.
+
+                        </p>
+                        <ul className="mt-4 space-y-1 text-sm text-foreground/70">
+                            <li><b>Tech:</b> Lua, Neovim</li>
+                        </ul>
+                        <div className="mt-5 flex flex-wrap gap-4 text-sm">
+                            <a
+                                className="link"
+                                href="https://github.com/jeanbeanie/project-switcher.nvim"
+                                target="_blank"
+                                rel="noreferrer"
+                            >
+                                Code →
+                            </a>
+                        </div>
+                    </article>
 
                     <article className="card">
                         <h4 className="font-semibold">ImSoCode</h4>
@@ -215,7 +260,7 @@ export default function Home({ latestPosts }: { latestPosts: PostMeta[] }) {
                     <article className="card">
                         <h4 className="font-semibold">Conway’s Game of Life</h4>
                         <p className="mt-2 text-sm text-foreground/60">
-                            Interactive simulation playground built with React + Node.
+                            Interactive simulation playground based on the famous simulation by Conway, built with React + Node.
                         </p>
                         <ul className="mt-4 space-y-1 text-sm text-foreground/70">
                             <li><b>Tech:</b> React, Node/Express</li>
@@ -236,7 +281,7 @@ export default function Home({ latestPosts }: { latestPosts: PostMeta[] }) {
                     <article className="card">
                         <h4 className="font-semibold">AskMan</h4>
                         <p className="mt-2 text-sm text-foreground/60">
-                            Prototype: “set and forget” reminders to reduce the overhead of managing commitments.
+                            Prototype: “set and forget” reminders to reduce the overhead of managing commitments. AskMan 2.0 is on my radar as a future creative project
                         </p>
                         <ul className="mt-4 space-y-1 text-sm text-foreground/70">
                             <li><b>Tech:</b> JavaScript</li>
