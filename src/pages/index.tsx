@@ -113,7 +113,7 @@ export default function Home({ latestPosts }: { latestPosts: PostMeta[] }) {
                     <article className="card">
                         <h3 className="font-semibold">Better YouTube TV</h3>
                         <p className="mt-2 text-sm text-foreground/60">
-                          <bold>[In early development]</bold> A personal YouTube viewing dashboard for directly watching the most recent uploads from only the channels you’re subscribed to. 
+                          <b>[In early development]</b> A personal YouTube viewing dashboard for directly watching the most recent uploads from only the channels you’re subscribed to. 
                           A TV queue for your subscriptions. 
                         </p>
                         <ul className="mt-4 space-y-1 text-sm text-foreground/70">
@@ -218,7 +218,7 @@ export default function Home({ latestPosts }: { latestPosts: PostMeta[] }) {
                         <h4 className="font-semibold">project-switcher.nvim</h4>
                         <p className="mt-2 text-sm text-foreground/60">
                           A small neovim plugin for quick switching between projects. Restore project sessions in a single Neovim instance: 
-                          selecting a project changes the working directory and restores that project's session automatically.
+                          selecting a project changes the working directory and restores that projects session automatically.
 
                         </p>
                         <ul className="mt-4 space-y-1 text-sm text-foreground/70">
