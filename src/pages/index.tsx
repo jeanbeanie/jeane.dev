@@ -118,7 +118,7 @@ export default function Home({ latestPosts }: { latestPosts: PostMeta[] }) {
                         </p>
                         <ul className="mt-4 space-y-1 text-sm text-foreground/70">
                             <li><b>Tech:</b> React, Vite, Express, Postgres, Google APIs</li>
-                            <li><b>Highlights:</b> caching, Node APIs/Middleware, custom Player component</li>
+                            <li><b>Highlights:</b> caching, custom auth and session handling middleware, custom Player component</li>
                         </ul>
                         <div className="mt-5 flex flex-wrap gap-4 text-sm">
                             <a
