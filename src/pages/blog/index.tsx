@@ -5,7 +5,6 @@ import { getAllPosts } from '@/lib/posts';
 import Head from 'next/head';
 import Link from 'next/link';
 export default function BlogIndex({ posts }: { posts: ReturnType<typeof getAllPosts> }) {
-    console.log('posts',posts);
     return (
         <>
             <Head>

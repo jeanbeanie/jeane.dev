@@ -2,11 +2,20 @@
 // src/pages/index.tsx
 import RotatingWord from "@/components/RotatingWord";
 import { getAllPosts, type PostMeta } from "@/lib/posts";
+import Head from 'next/head';
 import Link from 'next/link';
 
 export default function Home({ latestPosts }: { latestPosts: PostMeta[] }) {
     return (
         <>
+        <Head>
+            <title>Jeane Ramos — Software Developer</title>
+            <meta
+                name="description"
+                content="Portfolio of Jeane Ramos, a self taught software developer building projects with React, Next.js, TypeScript, and Node."
+            />
+        </Head>
+
         {/* Hero Section */}
             <section className="section">
                 <div className="grid gap-10 md:grid-cols-[320px_1fr] md:items-center">
