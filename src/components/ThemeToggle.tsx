@@ -15,6 +15,8 @@ export default function ThemeToggle() {
     useEffect(() => {
         const root = document.documentElement;
         const isDark = root.classList.contains("dark");
+        // theme lives in the DOM, not props/state (can't be computed during render, only read after mount)
+        // eslint-disable-next-line react-hooks/set-state-in-effect
         setTheme(isDark ? "dark" : "light");
     }, []);
 
