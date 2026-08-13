@@ -17,7 +17,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                     <Link className="px-2 text-foreground/70 hover:text-foreground" href="/#projects">Projects</Link>
                     <Link className="px-2 text-foreground/70 hover:text-foreground" href="/blog">Blog</Link>
 
-                    <a className="px-3 py-2 border rounded-xl border-foreground/20 text-foreground/70 hover:text-foreground" href="#" title="PDF Resume">
+                    <a className="px-3 py-2 border rounded-xl border-foreground/20 text-foreground/70 hover:text-foreground" href="/Jeane_Ramos_Resume.pdf" title="PDF Resume" download>
                         Download Resume
                     </a>
 
