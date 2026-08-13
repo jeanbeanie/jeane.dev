@@ -12,7 +12,7 @@ export default function Home({ latestPosts }: { latestPosts: PostMeta[] }) {
             <title>Jeane Ramos — Software Developer</title>
             <meta
                 name="description"
-                content="Portfolio of Jeane Ramos, a self taught software developer building projects with React, Next.js, TypeScript, and Node."
+                content="Portfolio of Jeane Ramos, a frontend engineer building projects with React, Next.js, TypeScript, and Node."
             />
         </Head>
 
@@ -26,7 +26,7 @@ export default function Home({ latestPosts }: { latestPosts: PostMeta[] }) {
                             Jeane Ramos
                         </h1>
                         <p className="mt-5 text-lg text-foreground/75">
-                            I’m a self taught software developer that is in love with {" "}
+                            I’m a frontend engineer who’s in love with {" "}
                             <RotatingWord words={[
                                 "building cool things", 
                                 "clean code", 
@@ -54,6 +54,7 @@ export default function Home({ latestPosts }: { latestPosts: PostMeta[] }) {
                         <h3 className="font-semibold">Frontend</h3>
                         <div className="mt-4 flex flex-wrap gap-2">
                             <span className="chip">React</span>
+                            <span className="chip">React Router</span>
                             <span className="chip">Next.js</span>
                             <span className="chip">TypeScript</span>
                             <span className="chip">Vite</span>
@@ -73,6 +74,7 @@ export default function Home({ latestPosts }: { latestPosts: PostMeta[] }) {
                         <h3 className="font-semibold">Testing & Practices</h3>
                         <div className="mt-4 flex flex-wrap gap-2">
                             <span className="chip">Jest</span>
+                            <span className="chip">Vitest</span>
                             <span className="chip">Component Testing</span>
                             <span className="chip">Debugging</span>
                             <span className="chip">CI/CD</span>
@@ -96,6 +98,9 @@ export default function Home({ latestPosts }: { latestPosts: PostMeta[] }) {
                             <span className="chip">Ruby on Rails</span>
                             <span className="chip">PHP (LAMP)</span>
                             <span className="chip">Bash / Vim</span>
+                            <span className="chip">Railway</span>
+                            <span className="chip">Zod</span>
+                            <span className="chip">Docker</span>
                         </div>
                         <p className="mt-4 text-sm text-foreground/60">
                             Comfortable shipping end-to-end features and collaborating across the stack.
@@ -120,16 +125,24 @@ export default function Home({ latestPosts }: { latestPosts: PostMeta[] }) {
                 {/* Featured */}
                 <div className="mt-10 grid gap-6 md:grid-cols-4">
                     <article className="card">
-                        <h3 className="font-semibold">Better YouTube TV</h3>
+                        <h3 className="font-semibold">YT Catchup</h3>
                         <p className="mt-2 text-sm text-foreground/60">
-                          <b>[In early development]</b> A personal YouTube viewing dashboard for directly watching the most recent uploads from only the channels you’re subscribed to. 
-                          A TV queue for your subscriptions. 
+                          A YouTube subscription dashboard, live in production, that pulls recent uploads from every channel you follow into
+                          one round robin queue. Includes curated Lists to narrow the queue and a catch up autoplay mode.
                         </p>
                         <ul className="mt-4 space-y-1 text-sm text-foreground/70">
-                            <li><b>Tech:</b> React, Vite, Express, Postgres, Google APIs</li>
-                            <li><b>Highlights:</b> caching, custom auth and session handling middleware, custom Player component</li>
+                            <li><b>Tech:</b> React, TypeScript, Vite, Express, Postgres, Google APIs</li>
+                            <li><b>Highlights:</b> custom auth &amp; session middleware, curated Lists feature, caching, automated test suite (Vitest + RTL), deployed on Railway</li>
                         </ul>
                         <div className="mt-5 flex flex-wrap gap-4 text-sm">
+                            <a
+                                className="link"
+                                href="https://ytcatchup.com"
+                                target="_blank"
+                                rel="noreferrer"
+                            >
+                                Live →
+                            </a>
                             <a
                                 className="link"
                                 href="https://github.com/jeanbeanie/better-yt-tv"
