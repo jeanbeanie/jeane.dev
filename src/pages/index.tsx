@@ -49,7 +49,7 @@ export default function Home({ latestPosts }: { latestPosts: PostMeta[] }) {
                     A few of the seeds planted in the garden of my mind
                 </p>
 
-                <div className="mt-10 grid gap-6 md:grid-cols-3">
+                <div className="mt-10 grid gap-6 md:grid-cols-4">
                     <div className="card">
                         <h3 className="font-semibold">Frontend</h3>
                         <div className="mt-4 flex flex-wrap gap-2">
@@ -89,21 +89,36 @@ export default function Home({ latestPosts }: { latestPosts: PostMeta[] }) {
                     </div>
 
                     <div className="card">
-                        <h3 className="font-semibold">Backend / Other</h3>
+                        <h3 className="font-semibold">Backend</h3>
                         <div className="mt-4 flex flex-wrap gap-2">
                             <span className="chip">Node</span>
                             <span className="chip">Express</span>
                             <span className="chip">REST</span>
                             <span className="chip">Postgres</span>
-                            <span className="chip">Ruby on Rails</span>
-                            <span className="chip">PHP (LAMP)</span>
-                            <span className="chip">Bash / Vim</span>
-                            <span className="chip">Railway</span>
                             <span className="chip">Zod</span>
                             <span className="chip">Docker</span>
+                            <span className="chip">Railway</span>
+                            <span className="chip">OAuth</span>
                         </div>
                         <p className="mt-4 text-sm text-foreground/60">
                             Comfortable shipping end-to-end features and collaborating across the stack.
+                        </p>
+                    </div>
+
+                    <div className="card">
+                        <h3 className="font-semibold">Languages / AI / Other</h3>
+                        <div className="mt-4 flex flex-wrap gap-2">
+                            <span className="chip">Python</span>
+                            <span className="chip">C#</span>
+                            <span className="chip">Lua</span>
+                            <span className="chip">LangChain</span>
+                            <span className="chip">LangGraph</span>
+                            <span className="chip">Ruby on Rails</span>
+                            <span className="chip">PHP (LAMP)</span>
+                            <span className="chip">Bash / Vim</span>
+                        </div>
+                        <p className="mt-4 text-sm text-foreground/60">
+                            Always poking at something new, whether it&apos;s a language, an agent framework, or an old stack I still remember.
                         </p>
                     </div>
                 </div>
@@ -155,31 +170,84 @@ export default function Home({ latestPosts }: { latestPosts: PostMeta[] }) {
                     </article>
 
                     <article className="card">
-                        <h3 className="font-semibold">PomoRPG</h3>
+                        <h3 className="font-semibold">LumberCampBiomePatch (RimWorld Mod)</h3>
                         <p className="mt-2 text-sm text-foreground/60">
-                            An RPG-inspired pomodoro timer focused on gamifying the art of building momentum and reaching flow state. Meant to provide satisfying feedback while helping reduce burnout.
+                            Extends RimWorld logging worksites by adding support for custom biomes and wood types, with automatic detection of new biome mods so it keeps working without updates. 170+ active Steam subscribers.
                         </p>
+
                         <ul className="mt-4 space-y-1 text-sm text-foreground/70">
-                            <li><b>Tech:</b> React, TypeScript, Vite</li>
-                            <li><b>Highlights:</b> Timer state flow, UI feedback loops</li>
+                            <li><b>Tech:</b> C#, RimWorld/Verse API</li>
+                            <li><b>Highlights:</b> HarmonyLib (runtime patching), log mapping by biome, automatically detects modded biomes&apos; custom wood, loot/site spawn rule overrides</li>
                         </ul>
+
                         <div className="mt-5 flex flex-wrap gap-4 text-sm">
                             <a
                                 className="link"
-                                href="https://jeanbeanie.github.io/pomoRPG/"
+                                href="https://steamcommunity.com/sharedfiles/filedetails/?id=3584277707"
                                 target="_blank"
                                 rel="noreferrer"
                             >
-                                Live →
+                                Steam Workshop →
                             </a>
                         </div>
                     </article>
 
                     <article className="card">
-                        <h3 className="font-semibold">Tiny Games</h3>
+                        <h3 className="font-semibold">project-switcher.nvim</h3>
                         <p className="mt-2 text-sm text-foreground/60">
-                            A collection of small vanilla JS games, including Colony Clicker and Tiny Pets: quick experiments for staying sharp with bare bones Javascript 
-                              while providing a creative outlet.
+                          A small neovim plugin for quick switching between projects. Restore project sessions in a single Neovim instance:
+                          selecting a project changes the working directory and restores that project&apos;s session automatically.
+                        </p>
+                        <ul className="mt-4 space-y-1 text-sm text-foreground/70">
+                            <li><b>Tech:</b> Lua, Neovim</li>
+                            <li><b>Highlights:</b> Telescope project picker, automatic session restore via persistence.nvim</li>
+                        </ul>
+                        <div className="mt-5 flex flex-wrap gap-4 text-sm">
+                            <a
+                                className="link"
+                                href="https://github.com/jeanbeanie/project-switcher.nvim"
+                                target="_blank"
+                                rel="noreferrer"
+                            >
+                                Code →
+                            </a>
+                        </div>
+                    </article>
+
+                    <article className="card">
+                        <h3 className="font-semibold">Python Agent</h3>
+                        <p className="mt-2 text-sm text-foreground/60">
+                            A terminal chat agent built with LangChain/LangGraph and the OpenAI API, with tools that pull Hacker News stories and look up GitHub repo stats for active coders.
+                        </p>
+                        <ul className="mt-4 space-y-1 text-sm text-foreground/70">
+                            <li><b>Tech:</b> Python, LangChain, LangGraph, OpenAI API</li>
+                            <li><b>Highlights:</b> fully async input loop, LangGraph checkpointer for conversation memory, custom tool integrations</li>
+                        </ul>
+                        <div className="mt-5 flex flex-wrap gap-4 text-sm">
+                            <a
+                                className="link"
+                                href="https://github.com/jeanbeanie/python-agent"
+                                target="_blank"
+                                rel="noreferrer"
+                            >
+                                Code →
+                            </a>
+                        </div>
+                    </article>
+                </div>
+
+                {/* More projects */}
+                <h3 className="mt-14 text-sm font-semibold tracking-wide text-foreground/70">
+                    More projects
+                </h3>
+
+                <div className="mt-4 grid gap-6 md:grid-cols-4">
+
+                    <article className="card">
+                        <h4 className="font-semibold">Tiny Games</h4>
+                        <p className="mt-2 text-sm text-foreground/60">
+                            A collection of small vanilla JS games, including Colony Clicker and Tiny Pet: quick experiments for staying sharp with bare bones Javascript
+                            while providing a creative outlet.
                         </p>
                         <ul className="mt-4 space-y-1 text-sm text-foreground/70">
                             <li><b>Tech:</b> HTML, CSS, JavaScript</li>
@@ -206,50 +274,26 @@ export default function Home({ latestPosts }: { latestPosts: PostMeta[] }) {
                     </article>
 
                     <article className="card">
-                        <h3 className="font-semibold">LumberCampBiomePatch (RimWorld Mod)</h3>
+                        <h4 className="font-semibold">PomoRPG</h4>
                         <p className="mt-2 text-sm text-foreground/60">
-                            Extends RimWorld logging worksites by adding support for custom biomes and wood types. 150+ active Steam subscribers
+                            A pomodoro timer inspired by RPGs, focused on gamifying the art of building momentum and reaching flow state. Meant to provide satisfying feedback while helping reduce burnout.
                         </p>
-
                         <ul className="mt-4 space-y-1 text-sm text-foreground/70">
-                            <li><b>Tech:</b> C#, RimWorld/Verse API</li>
-                            <li><b>Highlights:</b> HarmonyLib (runtime patching), biome-based log mapping, loot/site spawn rule overrides</li>
+                            <li><b>Tech:</b> React, TypeScript, Vite</li>
+                            <li><b>Highlights:</b> XP &amp; skill tree system, boss battles every 4 pomodoro cycles, timer drift correction for backgrounded tabs</li>
                         </ul>
-
                         <div className="mt-5 flex flex-wrap gap-4 text-sm">
                             <a
                                 className="link"
-                                href="https://steamcommunity.com/sharedfiles/filedetails/?id=3584277707"
+                                href="https://jeanbeanie.github.io/pomoRPG/"
                                 target="_blank"
                                 rel="noreferrer"
                             >
-                                Steam Workshop →
+                                Live →
                             </a>
-                        </div>
-                    </article>
-                </div>
-
-                {/* More projects */}
-                <h3 className="mt-14 text-sm font-semibold tracking-wide text-foreground/70">
-                    More projects
-                </h3>
-
-                <div className="mt-4 grid gap-6 md:grid-cols-4">
-
-                    <article className="card">
-                        <h4 className="font-semibold">project-switcher.nvim</h4>
-                        <p className="mt-2 text-sm text-foreground/60">
-                          A small neovim plugin for quick switching between projects. Restore project sessions in a single Neovim instance: 
-                          selecting a project changes the working directory and restores that projects session automatically.
-
-                        </p>
-                        <ul className="mt-4 space-y-1 text-sm text-foreground/70">
-                            <li><b>Tech:</b> Lua, Neovim</li>
-                        </ul>
-                        <div className="mt-5 flex flex-wrap gap-4 text-sm">
                             <a
                                 className="link"
-                                href="https://github.com/jeanbeanie/project-switcher.nvim"
+                                href="https://github.com/jeanbeanie/pomoRPG"
                                 target="_blank"
                                 rel="noreferrer"
                             >
@@ -292,27 +336,6 @@ export default function Home({ latestPosts }: { latestPosts: PostMeta[] }) {
                             <a
                                 className="link"
                                 href="https://github.com/jeanbeanie/CGOL_node_react"
-                                target="_blank"
-                                rel="noreferrer"
-                            >
-                                Code →
-                            </a>
-                        </div>
-                    </article>
-
-                    <article className="card">
-                        <h4 className="font-semibold">AskMan</h4>
-                        <p className="mt-2 text-sm text-foreground/60">
-                            Prototype: “set and forget” reminders to reduce the overhead of managing commitments. AskMan 2.0 is on my radar as a future creative project
-                        </p>
-                        <ul className="mt-4 space-y-1 text-sm text-foreground/70">
-                            <li><b>Tech:</b> JavaScript</li>
-                            <li><b>Status:</b> In development</li>
-                        </ul>
-                        <div className="mt-5 flex flex-wrap gap-4 text-sm">
-                            <a
-                                className="link"
-                                href="https://github.com/jeanbeanie/askman"
                                 target="_blank"
                                 rel="noreferrer"
                             >
