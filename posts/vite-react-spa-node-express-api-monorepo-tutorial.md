@@ -5,8 +5,6 @@ description: "An easy to follow tutorial on setting up a simple server/client mo
 slug: "vite-react-spa-node-express-api-monorepo-tutorial"
 ---
 
-# Vite React SPA with Node/Express API Monorepo Tutorial
-
 In this tutorial, you will learn how to set up a modern monorepo architecture by combining a Vite-powered React SPA client with a Node.js/Express API server.
 
 A monorepo allows you to manage multiple projects in a single repository (in this case, the client and server), making it easier to share code and maintain consistency across your applications. In this tutorial, we will use pnpm as our package manager to create a workspace that includes both the client and server projects.

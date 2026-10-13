@@ -8,7 +8,7 @@ export default function BlogPost({ meta, html }: { meta: PostMeta; html: string 
     return (
         <>
             <Head>
-                <title>{meta.title} — Jeane Ramos</title>
+                <title>{`${meta.title} — Jeane Ramos`}</title>
             </Head>
 
             <main className="container-page section">

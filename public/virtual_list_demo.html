@@ -1,0 +1,85 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>Virtual List Demo</title>
+  <!-- React 18 + Babel from a CDN so this file runs by double clicking it, no setup needed -->
+  <script crossorigin src="https://unpkg.com/react@18.3.1/umd/react.development.js"></script>
+  <script crossorigin src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js"></script>
+  <script src="https://unpkg.com/@babel/standalone@7.26.4/babel.min.js"></script>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 24px; }
+    .viewport {
+        height: 500px;
+        width: 360px;
+        overflow-y: auto;
+        border: 2px solid #1F3B57;
+    }
+    .row {
+        height: 50px;
+        box-sizing: border-box;
+        border-bottom: 1px solid #ddd;
+        padding: 0 12px;
+        display: flex;
+        align-items: center;
+    }
+    .stats { margin-top: 12px; font-size: 14px; }
+  </style>
+</head>
+<body>
+  <h2>My Tiny Virtual List</h2>
+  <div id="root"></div>
+
+  <script type="text/babel">
+    const { useState } = React;
+
+    const ROW_HEIGHT = 50;
+    const VIEWPORT_HEIGHT = 500;
+    const TOTAL_ROWS = 10000;
+    // a buffer of rows for the bottom and top of the visible list
+    const OVERSCAN = 3;
+
+    // generate an array of labeled items
+    const items = Array.from({ length: TOTAL_ROWS }, (_, i) => `Row number ${i}`);
+
+    function VirtualList() {
+      const [scrollTop, setScrollTop] = useState(0);
+
+      // the height of the whole list, as if every row existed
+      const totalHeight = ROW_HEIGHT*TOTAL_ROWS;
+
+      // the index of the first row to render
+      const rawStart = Math.floor(scrollTop/ROW_HEIGHT);
+      const start = Math.max(0, rawStart - OVERSCAN);
+
+      // the end index (exclusive, like the end of array.slice)
+      const rawEnd = Math.ceil((VIEWPORT_HEIGHT+scrollTop)/ROW_HEIGHT);
+      const end = Math.min(items.length, rawEnd + OVERSCAN);
+
+      // how far down to push the rendered rows so they line up
+      const offsetY = ROW_HEIGHT*start;
+
+      const visible = items.slice(start, end);
+
+      return (
+        <>
+          <div className="viewport" onScroll={(e) => setScrollTop(e.currentTarget.scrollTop)}>
+            <div style={{ height: totalHeight, position: 'relative' }}>
+              <div style={{ transform: `translateY(${offsetY}px)` }}>
+                {visible.map((text, i) => (
+                  <div className="row" key={start + i}>{text}</div>
+                ))}
+              </div>
+            </div>
+          </div>
+          <div className="stats">
+            scrollTop: {scrollTop} | rendering rows {start} to {end - 1} ({visible.length} rows in the DOM out of {TOTAL_ROWS})
+          </div>
+        </>
+      );
+    }
+
+    ReactDOM.createRoot(document.getElementById('root')).render(<VirtualList />);
+  </script>
+</body>
+</html>
