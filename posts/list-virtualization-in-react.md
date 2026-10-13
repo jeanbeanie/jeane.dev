@@ -7,6 +7,8 @@ slug: "list-virtualization-in-react"
 
 If you need to scroll through rows of data without displaying the entire array at once, virtualization is a good concept to have in your back pocket. A scrollable list of thousands of items could mean thousands of individual DOM nodes, causing the browser to lag instead of looking smooth and polished. Virtualization is rendering a subset of a bigger dataset (which remains in memory/state), while still managing the entire dataset behind the scenes. You display a certain number of visible rows in a height constrained DOM container, and calculate which rows should be displayed by looking at the scrollTop, row height, and the viewport container height.  
 
+![A regular list rendering 10,000 rows in the DOM next to a virtualized list rendering 14 rows](/virtualization_demo.gif)
+
 ### Here's how you implement a virtual list:
 
 You have a certain amount of total rows represented by an array of items, let's say there is 10000 items total in this example and you know each row is going to have a height of 50 pixels, so the `totalHeight` of all the rows stacked is going to be the `ROW_HEIGHT` by the number of rows, 10000 * 50, so 500,000 pixels long if every row was visible in this case. Of course this is only because every row in this example is the same height, varying row heights would mean we couldn't simply divide by one number, so it would require a different way of calculating the total height. We want only 10 rows to be visible, so the height of this viewport (`VIEWPORT_HEIGHT`) would have to be the height of a single row, times the number of rows you want to be visible (10 in our case), 50 * 10 = 500 pixels for the height of the viewport.
@@ -44,7 +46,7 @@ return(
 )
 ```
 
-### The example that made it click for me: 
+### The example that helped it click for me: 
 
 Imagine a long ruler showing the entire list of rows, with a mark for every pixel, 500,000 marks in this example, split every 50 (row height) so you can easily see the 10,000 rows all along the ruler. We can put a little window that we can slide up and down the ruler to represent the rows we want to be visible in our viewport.
 
@@ -107,7 +109,7 @@ Back to our DOM, we have a div with CSS class "viewport", adding `height: 500px`
 </div>
 ```
 
-Let's pull everything together now. Here is a working code example of a virtual list using our example numbers, with a nifty little stats bar below the list to peek into the numbers, all in a simple React component below. Right click [here](/virtual_list_demo.html) and choose "Save Link As" to save the HTML file, then open it in your browser, or ctrl click the link to open the demo in a new tab. React loads from the internet, so you’ll need a connection. Feel free to ask questions or leave feedback on [GitHub](https://github.com/jeanbeanie), [X](https://x.com/onlyjeanbean), or [Instagram](https://instagram.com/onlyjeanbean), or see more of my work at [jeane.dev](https://jeane.dev).
+Let's pull everything together now. Here is a working code example of a virtual list using our example numbers, with a nifty little stats bar below the list to peek into the numbers, all in a simple React component below. Right click [here](/virtual_list_demo.html) and choose "Save Link As" to save the HTML file, then open it in your browser, or ctrl click the link to open the demo in a new tab. React loads from the internet, so you’ll need a connection.
 
 ```
 <!doctype html>
@@ -212,3 +214,6 @@ You definitely don't have to build virtual lists by hand every time. Below are t
 - **Accessibility and keyboard navigation will need extra care.** Screen readers and the tab key can only reach the rows that exist in the DOM, and rows come and go as you scroll with a virtual list. You will have to ensure whatever library you choose handles this properly.
 - **Select all and print only include what's actually rendered.**
 - **If you have a small list to render you probably don't need it.** If you only have a few hundred simple rows, the browser will scroll them smoothly, and virtualization is just overkill at that point. It's important to actually test your code for performance instead of optimizing for the sake of it.
+
+
+Whether you decide to build a custom virtualization solution from scratch or opt for an established library, you now have the tools to ensure scrolling through a gajillion items doesn't blow up the browser. Feel free to ask questions or leave feedback on [GitHub](https://github.com/jeanbeanie), [X](https://x.com/onlyjeanbean), or [Instagram](https://instagram.com/onlyjeanbean), or see more of my work at [jeane.dev](https://jeane.dev). 🌸
