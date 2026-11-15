@@ -12,7 +12,7 @@ export default function Home({ latestPosts }: { latestPosts: PostMeta[] }) {
             <title>Jeane Ramos — Software Developer</title>
             <meta
                 name="description"
-                content="Portfolio of Jeane Ramos, a frontend engineer building projects with React, Next.js, TypeScript, and Node."
+                content="Portfolio of Jeane Ramos, a full stack engineer building production apps with React, Next.js, TypeScript, Node, and Postgres."
             />
         </Head>
 
@@ -26,13 +26,14 @@ export default function Home({ latestPosts }: { latestPosts: PostMeta[] }) {
                             Jeane Ramos
                         </h1>
                         <p className="mt-5 text-lg text-foreground/75">
-                            I’m a frontend engineer who’s in love with {" "}
+                            I’m a full stack engineer who’s in love with {" "}
                             <RotatingWord words={[
                                 "building cool things", 
                                 "clean code", 
                                 "fixing tricky bugs", 
                                 "solving problems", 
-                                "learning new techs"
+                                "learning new techs",
+                                "AI powered workflows"
                                 ]}
                             />.
                         </p>
@@ -146,8 +147,8 @@ export default function Home({ latestPosts }: { latestPosts: PostMeta[] }) {
                           one round robin queue. Includes curated Lists to narrow the queue and a catch up autoplay mode.
                         </p>
                         <ul className="mt-4 space-y-1 text-sm text-foreground/70">
-                            <li><b>Tech:</b> React, TypeScript, Vite, Express, Postgres, Google APIs</li>
-                            <li><b>Highlights:</b> custom auth &amp; session middleware, curated Lists feature, caching, automated test suite (Vitest + RTL), deployed on Railway</li>
+                            <li><b>Tech:</b> React, TypeScript, Vite, Express, Postgres, Docker, Zod, Google OAuth, Grafana, Railway</li>
+                            <li><b>Highlights:</b> runs on YouTube&apos;s free API tier ($0) while caching 75,000+ videos, admin panel with quota tracking &amp; kill switch, no-login demo, CSRF-protected OAuth, Vitest + RTL tests</li>
                         </ul>
                         <div className="mt-5 flex flex-wrap gap-4 text-sm">
                             <a
@@ -157,6 +158,14 @@ export default function Home({ latestPosts }: { latestPosts: PostMeta[] }) {
                                 rel="noreferrer"
                             >
                                 Live →
+                            </a>
+                            <a
+                                className="link"
+                                href="https://ytcatchup.com/demo"
+                                target="_blank"
+                                rel="noreferrer"
+                            >
+                                Demo →
                             </a>
                             <a
                                 className="link"
@@ -217,10 +226,10 @@ export default function Home({ latestPosts }: { latestPosts: PostMeta[] }) {
                     <article className="card">
                         <h3 className="font-semibold">Python Agent</h3>
                         <p className="mt-2 text-sm text-foreground/60">
-                            A terminal chat agent built with LangChain/LangGraph and the OpenAI API, with tools that pull Hacker News stories and look up GitHub repo stats for active coders.
+                            A terminal chat agent built with LangChain/LangGraph and the OpenAI API, with tools that search Hacker News stories and query GitHub&apos;s GraphQL API for repo stats and recent commits.
                         </p>
                         <ul className="mt-4 space-y-1 text-sm text-foreground/70">
-                            <li><b>Tech:</b> Python, LangChain, LangGraph, OpenAI API</li>
+                            <li><b>Tech:</b> Python 3.14, uv, LangChain, LangGraph, OpenAI API, GraphQL, httpx</li>
                             <li><b>Highlights:</b> fully async input loop, LangGraph checkpointer for conversation memory, custom tool integrations</li>
                         </ul>
                         <div className="mt-5 flex flex-wrap gap-4 text-sm">
