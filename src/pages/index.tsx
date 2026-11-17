@@ -207,6 +207,9 @@ export default function Home({ latestPosts }: { latestPosts: PostMeta[] }) {
                           A small neovim plugin for quick switching between projects. Restore project sessions in a single Neovim instance:
                           selecting a project changes the working directory and restores that project&apos;s session automatically.
                         </p>
+                        <p className="mt-2 text-sm text-foreground/60">
+                          Currently my most starred repo, so if it saves you a few keystrokes, a star is always appreciated!
+                        </p>
                         <ul className="mt-4 space-y-1 text-sm text-foreground/70">
                             <li><b>Tech:</b> Lua, Neovim</li>
                             <li><b>Highlights:</b> Telescope project picker, automatic session restore via persistence.nvim</li>
@@ -224,39 +227,13 @@ export default function Home({ latestPosts }: { latestPosts: PostMeta[] }) {
                     </article>
 
                     <article className="card">
-                        <h3 className="font-semibold">Python Agent</h3>
+                        <h3 className="font-semibold">Tiny Games</h3>
                         <p className="mt-2 text-sm text-foreground/60">
-                            A terminal chat agent built with LangChain/LangGraph and the OpenAI API, with tools that search Hacker News stories and query GitHub&apos;s GraphQL API for repo stats and recent commits.
+                            A collection of small vanilla JS games: little experiments made to keep my plain JavaScript skills sharp,
+                            and because building games is just fun.
                         </p>
-                        <ul className="mt-4 space-y-1 text-sm text-foreground/70">
-                            <li><b>Tech:</b> Python 3.14, uv, LangChain, LangGraph, OpenAI API, GraphQL, httpx</li>
-                            <li><b>Highlights:</b> fully async input loop, LangGraph checkpointer for conversation memory, custom tool integrations</li>
-                        </ul>
-                        <div className="mt-5 flex flex-wrap gap-4 text-sm">
-                            <a
-                                className="link"
-                                href="https://github.com/jeanbeanie/python-agent"
-                                target="_blank"
-                                rel="noreferrer"
-                            >
-                                Code →
-                            </a>
-                        </div>
-                    </article>
-                </div>
-
-                {/* More projects */}
-                <h3 className="mt-14 text-sm font-semibold tracking-wide text-foreground/70">
-                    More projects
-                </h3>
-
-                <div className="mt-4 grid gap-6 md:grid-cols-4">
-
-                    <article className="card">
-                        <h4 className="font-semibold">Tiny Games</h4>
                         <p className="mt-2 text-sm text-foreground/60">
-                            A collection of small vanilla JS games, including Colony Clicker and Tiny Pet: quick experiments for staying sharp with bare bones Javascript
-                            while providing a creative outlet.
+                            Colony Clicker is a minimalist idle game about growing a colony with limited resources, balancing growth against scarce supplies and random setbacks.
                         </p>
                         <ul className="mt-4 space-y-1 text-sm text-foreground/70">
                             <li><b>Tech:</b> HTML, CSS, JavaScript</li>
@@ -274,6 +251,35 @@ export default function Home({ latestPosts }: { latestPosts: PostMeta[] }) {
                             <a
                                 className="link"
                                 href="https://github.com/jeanbeanie/tiny-games"
+                                target="_blank"
+                                rel="noreferrer"
+                            >
+                                Code →
+                            </a>
+                        </div>
+                    </article>
+                </div>
+
+                {/* More projects */}
+                <h3 className="mt-14 text-sm font-semibold tracking-wide text-foreground/70">
+                    More projects
+                </h3>
+
+                <div className="mt-4 grid gap-6 md:grid-cols-4">
+
+                    <article className="card">
+                        <h4 className="font-semibold">Python Agent</h4>
+                        <p className="mt-2 text-sm text-foreground/60">
+                            A terminal chat agent built with LangChain/LangGraph and the OpenAI API, with tools that search Hacker News stories and query GitHub&apos;s GraphQL API for repo stats and recent commits.
+                        </p>
+                        <ul className="mt-4 space-y-1 text-sm text-foreground/70">
+                            <li><b>Tech:</b> Python 3.14, uv, LangChain, LangGraph, OpenAI API, GraphQL, httpx</li>
+                            <li><b>Highlights:</b> fully async input loop, LangGraph checkpointer for conversation memory, custom tool integrations</li>
+                        </ul>
+                        <div className="mt-5 flex flex-wrap gap-4 text-sm">
+                            <a
+                                className="link"
+                                href="https://github.com/jeanbeanie/python-agent"
                                 target="_blank"
                                 rel="noreferrer"
                             >
