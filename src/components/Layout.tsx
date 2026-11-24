@@ -1,7 +1,9 @@
+import { useState } from "react";
 import Link from "next/link";
 import ThemeToggle from "../components/ThemeToggle";
 
 export default function Layout({ children }: { children: React.ReactNode }) {
+    const [menuOpen, setMenuOpen] = useState(false);
     return (
         <>
         {/* Top navbar */}
@@ -27,11 +29,28 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                 {/* Mobile */}
                 <div className="flex items-center gap-2 md:hidden">
                     <ThemeToggle />
-                    <Link className="rounded-xl border border-foreground/15 px-3 py-2 text-sm" href="/#skills">
-                        Menu
-                    </Link>
+                    <button
+                      type="button"
+                      aria-expanded={menuOpen}
+                      aria-controls="mobile-menu"
+                      onClick={() => setMenuOpen((open) => !open)}
+                      className="rounded-xl border border-foreground/15 px-3 py-2 text-sm"
+                    >
+                      Menu
+                    </button>
                 </div>
             </div>
+            {menuOpen && (
+                <nav id="mobile-menu" className="container-page flex flex-col gap-1 pb-4 text-sm md:hidden">
+                    <Link className="px-2 py-2 text-foreground/70 hover:text-foreground" href="/#skills" onClick={() => setMenuOpen(false)}>Skills</Link>
+                    <Link className="px-2 py-2 text-foreground/70 hover:text-foreground" href="/#projects" onClick={() => setMenuOpen(false)}>Projects</Link>
+                    <Link className="px-2 py-2 text-foreground/70 hover:text-foreground" href="/blog" onClick={() => setMenuOpen(false)}>Blog</Link>
+                    <a className="px-2 py-2 text-foreground/70 hover:text-foreground" href="/Jeane_Ramos_Resume.pdf" title="PDF Resume" download>
+                        Download Resume
+                    </a>
+                </nav>
+            )}
+
             </header>
 
             <main id="top" className="container-page">
